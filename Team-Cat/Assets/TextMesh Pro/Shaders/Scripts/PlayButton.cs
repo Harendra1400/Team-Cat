@@ -20,6 +20,6 @@ public class PlayButton : MonoBehaviour
     public void OnClickOfBtnPlay()
     {
         Debug.Log("-> Btn play");
-        SceneManager.LoadScene("Loading");
+        SceneManager.LoadScene("Gameplay");
     }
 }
