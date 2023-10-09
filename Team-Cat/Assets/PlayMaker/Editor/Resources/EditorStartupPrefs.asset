@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de5210ce93b60c74b910290c522cd727, type: 3}
-  m_Name: EditorStartupPrefs
+  m_Name: 
   m_EditorClassIdentifier: 
   welcomeScreenVersion: '1.9.1 '
   playmakerVersion: 
   showWelcomeScreen: 1
   showUpgradeGuide: 0
- Dev
-  lastAutoUpdateSignature: 2022.3.9f1__C:/Users/user/Documents/GitHub/Team-Cat/Team-Cat/Assets__0.0.0.0
-
-  lastAutoUpdateSignature: 2022.3.9f1__C:/Users/prasa/OneDrive/Documents/GitHub/Team-Cat/Team-Cat/Assets__0.0.0.0
- main
+  lastAutoUpdateSignature: 2022.3.9f1__C:/Users/dhars/OneDrive/Documents/GitHub/Team-Cat/Team-Cat/Assets__0.0.0.0
   useLegacyNetworking: 0
