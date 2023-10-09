@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068139423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1267632e1ea664329b73a71123adac64, type: 3}
+  m_Script: {fileID: 11500000, guid: c61c1e7f2aad11b41834d4f2fd3b5e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1068139427
@@ -2021,7 +2021,7 @@ Transform:
   m_GameObject: {fileID: 1204815758}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.9115, y: 8.69, z: 0}
+  m_LocalPosition: {x: -12.29, y: 7.23, z: 0}
   m_LocalScale: {x: 0.5378, y: 0.59, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2036,7 +2036,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1204815758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1267632e1ea664329b73a71123adac64, type: 3}
+  m_Script: {fileID: 11500000, guid: c61c1e7f2aad11b41834d4f2fd3b5e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1311377298
@@ -2064,7 +2064,7 @@ Transform:
   m_GameObject: {fileID: 1311377298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.58, y: 0, z: 0}
+  m_LocalPosition: {x: 24.51, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2970,8 +2970,8 @@ Transform:
   m_GameObject: {fileID: 1600817873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0168, y: 2.5295, z: 0}
-  m_LocalScale: {x: 2.1506996, y: 1.7316587, z: 1}
+  m_LocalPosition: {x: -0.1629, y: 2.8218, z: 0}
+  m_LocalScale: {x: 2.2497904, y: 1.7920574, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3002,13 +3002,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1791484592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d763a6a27a5e420fb3ceb3108161237, type: 3}
+  m_Script: {fileID: 11500000, guid: 72d0f2fd073383c4793703b58e7eb979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clouds:
   - {fileID: 1068139423}
   - {fileID: 1204815758}
-  spawnInterval: 2.5
+  spawnInterval: 2
   endPoint: {fileID: 1311377298}
 --- !u!4 &1791484594
 Transform:
@@ -3019,7 +3019,7 @@ Transform:
   m_GameObject: {fileID: 1791484592}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -962.5656, y: 308.69452, z: -8419.019}
+  m_LocalPosition: {x: -1149, y: 308.69452, z: -8419.019}
   m_LocalScale: {x: 93.54379, y: 93.54379, z: 93.54379}
   m_ConstrainProportionsScale: 0
   m_Children:
