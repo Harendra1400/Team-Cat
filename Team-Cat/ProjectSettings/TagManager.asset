@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Monster
   - Cat
+  - red_mon_spritesheet_0
   layers:
   - Default
   - TransparentFX
