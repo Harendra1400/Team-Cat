@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Bullet : MonoBehaviour
         if(hitInfo.gameObject.tag.Equals("Monster"))
         {
             Destroy(hitInfo.gameObject);
+            //SceneManager.LoadScene("Retry");
+
         }
     }
 }
