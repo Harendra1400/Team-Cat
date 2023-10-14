@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class RetrySwitcher : MonoBehaviour
 {
-    //public string sceneToLoad;
+    public string sceneToLoad;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         
-        if (other.CompareTag("Cat"))
+        if (other.gameObject.CompareTag("Cat"))
         {
             // Load the specified scene.
-            Destroy(other.gameObject);
-            SceneManager.LoadScene("Retry");
+            //Destroy(other.gameObject);
+            SceneManager.LoadScene(sceneToLoad);
         }
         else { }
     }

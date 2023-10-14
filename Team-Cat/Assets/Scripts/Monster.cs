@@ -20,13 +20,21 @@ public class Monster : MonoBehaviour
         transform.Translate(Vector3.left * (Time.deltaTime * _speed));
        
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Cat"))
+        // Check if the object collided with a stationary object
+        if (collision.gameObject.CompareTag("Cat"))
         {
-            // Load the specified scene.
-            Destroy(other.gameObject);
-            SceneManager.LoadScene("Retry");
+            transform.Translate(Vector3.left * (Time.deltaTime * 0));
+            Debug.Log("coliision!!");
+            LoadNewScene();
         }
     }
+
+    private void LoadNewScene()
+    {
+        SceneManager.LoadScene("Retry");
+       
+    }
 }
+

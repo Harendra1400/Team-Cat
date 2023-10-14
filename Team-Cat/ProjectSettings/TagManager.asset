@@ -48,3 +48,6 @@ TagManager:
   - name: foreground
     uniqueID: 1406715645
     locked: 1
+  - name: catGame
+    uniqueID: 3982248359
+    locked: 0
