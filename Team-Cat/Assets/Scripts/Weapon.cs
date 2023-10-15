@@ -11,15 +11,16 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+       if(Input.GetButtonDown("Fire1"))
         {
-            animator.SetTrigger("shoot");
+            
             Shoot();
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
+        animator.SetTrigger("shoot");
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
