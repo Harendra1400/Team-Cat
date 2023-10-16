@@ -3,23 +3,35 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MultipleChoiceQuestions : MonoBehaviour
 {   
     public Text questionTextArea;
     public Button[] optionButtons;
-    public Weapon forShoot;
+    //public Weapon forShoot;
+    public Text scoreCount;
 
     private int operand1;
     private int operand2;
     private int correctAnswer;
+    private int countScore;
 
     private void Start()
     {
         GenerateRandomQuestion();
         GenerateAnswerOptions();
-    }
+        countScore = 0;
 
+    }
+    private void Update()
+    {
+        scoreCount.text = countScore.ToString();
+        if (countScore == 5)
+        {
+            SceneManager.LoadScene("Retry");
+        }
+    }
     private void GenerateRandomQuestion()
     {
         operand1 = Random.Range(1, 10);
@@ -46,7 +58,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
             int randomOption;
             do
             {
-                randomOption = Random.Range(1, 21); 
+                randomOption = Random.Range(1, 19); 
             } while (System.Array.Exists(answerOptions, element => element == randomOption));
 
             answerOptions[i] = randomOption;
@@ -79,11 +91,12 @@ public class MultipleChoiceQuestions : MonoBehaviour
     {
         if (selectedAnswer == correctAnswer)
         {
-            
+            countScore += 1;
             Debug.Log("Correct Answer!");
             //forShoot.Shoot();
             GenerateRandomQuestion();
             GenerateAnswerOptions();
+            //countScore += 1;
 
         }
         else
