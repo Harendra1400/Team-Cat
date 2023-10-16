@@ -2877,7 +2877,7 @@ MonoBehaviour:
   - {fileID: 231935366}
   - {fileID: 760282127}
   - {fileID: 426560777}
-  forShoot: {fileID: 0}
+  scoreCount: {fileID: 0}
 --- !u!1 &1574919808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,6 +3076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703914736}
   - component: {fileID: 1703914735}
+  - component: {fileID: 1703914737}
   m_Layer: 0
   m_Name: coin_bar
   m_TagString: Untagged
@@ -3121,9 +3122,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1406715645
-  m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e913bf9fd4d2d473a8c7edf15a5c8ab3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3135,21 +3136,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1703914736
-Transform:
+--- !u!224 &1703914736
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703914734}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 517.985, y: 253.169, z: -5517}
+  m_LocalPosition: {x: 0, y: 0, z: -5517}
   m_LocalScale: {x: 21.665607, y: 21.677294, z: 61.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2101013749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 519, y: 233}
+  m_SizeDelta: {x: 9.33, y: 6.71}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1703914737
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703914734}
+  m_CullTransparentMesh: 1
 --- !u!1 &1715380090
 GameObject:
   m_ObjectHideFlags: 0
