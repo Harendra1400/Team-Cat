@@ -97,6 +97,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
             GenerateRandomQuestion();
             GenerateAnswerOptions();
             //countScore += 1;
+            //temp rng
 
         }
         else
