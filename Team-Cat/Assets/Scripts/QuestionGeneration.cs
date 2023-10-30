@@ -13,7 +13,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
     public Text scoreCount;
     private Vector3 originalPosition;
     public int x = 0;
-    public GameObject monsterRegen;
+    //public GameObject monsterYellow;
 
     private int operand1;
     private int operand2;
@@ -37,7 +37,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
         }
         if (countScore <4 ) { 
             x = 0;
-            GameObject newMonster = Instantiate(monsterRegen, originalPosition, Quaternion.identity);
+            //GameObject newMonster = Instantiate(monsterRegen, originalPosition, Quaternion.identity);
         } 
     }
     private void GenerateRandomQuestion()
@@ -105,6 +105,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
             //forShoot.Shoot();
             GenerateRandomQuestion();
             GenerateAnswerOptions();
+            //monsterYellow.SetActive(true);
             //countScore += 1;
             //temp rng
 
