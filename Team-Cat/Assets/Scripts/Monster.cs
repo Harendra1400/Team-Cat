@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Monster : MonoBehaviour
 {
-    public Animator animator;
+    public Animator animator1;
     private float _speed = 2f;
-    public string Retry= "Retry";
-    public float delay = 3;
+   // public string Retry= "Retry";
+    //public float delay = 3;
     
 
     // Start is called before the first frame update
@@ -22,27 +22,28 @@ public class Monster : MonoBehaviour
         transform.Translate(Vector3.left * (Time.deltaTime * _speed));
        
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Cat"))
         {
             animator.SetTrigger("monsterStop");
-            transform.Translate(Vector3.left * (Time.deltaTime * 0));
-            Debug.Log("coliision!!");
-            StartCoroutine(LoadLevelAfterDelay(delay)); 
+            //transform.Translate(Vector3.left * (Time.deltaTime * 0));
+            Debug.Log("collision!!");
+            //StartCoroutine(LoadLevelAfterDelay(delay)); 
             //LoadNewScene();
+            Invoke("LoadNewScene", 2.0f);
         }
     }
 
-    // private void LoadNewScene()
-    // {
-    //     SceneManager.LoadScene("Retry");
+     private void LoadNewScene()
+     {
+         SceneManager.LoadScene("Retry");
        
-    // }
+     }
     IEnumerator LoadLevelAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(Retry);
-    }
+        SceneManager.LoadScene("Retry");
+    }*/
 }
 

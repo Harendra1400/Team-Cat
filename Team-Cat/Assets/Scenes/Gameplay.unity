@@ -822,7 +822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &485542738
 Transform:
   m_ObjectHideFlags: 0
@@ -832,7 +832,7 @@ Transform:
   m_GameObject: {fileID: 485542737}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1070, y: -143, z: 13.552018}
+  m_LocalPosition: {x: -1026, y: -143, z: 13.552018}
   m_LocalScale: {x: 61.3, y: 61.3, z: 61.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2090,6 +2090,7 @@ GameObject:
   - component: {fileID: 1013939707}
   - component: {fileID: 1013939708}
   - component: {fileID: 1013939709}
+  - component: {fileID: 1013939710}
   m_Layer: 5
   m_Name: red_mon_spritesheet_0
   m_TagString: Monster
@@ -2179,7 +2180,7 @@ Transform:
   m_GameObject: {fileID: 1013939700}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 974, y: -85, z: -5517}
+  m_LocalPosition: {x: 1218, y: -85, z: -5517}
   m_LocalScale: {x: 130, y: 130, z: 66.71892}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2197,8 +2198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4109441019a884681ab9dabb5f769b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  delay: 3
+  animator1: {fileID: 1013939701}
 --- !u!114 &1013939707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2274,6 +2274,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.000000007450581}
   serializedVersion: 2
   m_Radius: 1.7
+--- !u!114 &1013939710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013939700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba511b8cd53c4ba8a71407ce1154296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 13
+  rb: {fileID: 0}
 --- !u!1 &1087961567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,7 +2313,7 @@ Transform:
   m_GameObject: {fileID: 1087961567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.51, y: -0.25, z: 0}
+  m_LocalPosition: {x: 1.67, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2974,6 +2988,8 @@ MonoBehaviour:
   - {fileID: 760282127}
   - {fileID: 426560777}
   scoreCount: {fileID: 0}
+  x: 0
+  monsterRegen: {fileID: 0}
 --- !u!1 &1539314629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,7 +3348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1113, y: 493}
+  m_AnchoredPosition: {x: 995, y: 456}
   m_SizeDelta: {x: 9.33, y: 6.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1703914737
@@ -4022,8 +4038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4109441019a884681ab9dabb5f769b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  delay: 15
+  animator1: {fileID: 0}
 --- !u!1 &2031631738
 GameObject:
   m_ObjectHideFlags: 0

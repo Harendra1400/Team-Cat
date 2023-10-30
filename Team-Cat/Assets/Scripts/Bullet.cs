@@ -7,7 +7,8 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 13f;
     public Rigidbody2D rb;
-    public GameObject monsterPrefab;
+    //public GameObject monsterPrefab;
+    //public GameObject newMonster;
     private Vector3 originalPosition;
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,11 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
         Destroy(gameObject);
-        GameObject newMonster = Instantiate(monsterPrefab, originalPosition, Quaternion.identity);
-        /*if(hitInfo.gameObject.tag.Equals("Monster"))
+        if(hitInfo.gameObject.tag.Equals("Monster"))
         {
             Destroy(hitInfo.gameObject);
-            GameObject newMonster = Instantiate(monsterPrefab, originalPosition, Quaternion.identity);
             //SceneManager.LoadScene("Retry");
 
-        }*/
+        }
     }
 }
