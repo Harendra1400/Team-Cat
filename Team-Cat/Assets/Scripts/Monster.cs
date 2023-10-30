@@ -24,7 +24,6 @@ public class Monster : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the object collided with a stationary object
         if (collision.gameObject.CompareTag("Cat"))
         {
             animator.SetTrigger("monsterStop");
