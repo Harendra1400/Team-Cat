@@ -11,6 +11,9 @@ public class MultipleChoiceQuestions : MonoBehaviour
     public Button[] optionButtons;
     //public Weapon forShoot;
     public Text scoreCount;
+    private Vector3 originalPosition;
+    public int x = 0;
+    public GameObject monsterRegen;
 
     private int operand1;
     private int operand2;
@@ -22,6 +25,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
         GenerateRandomQuestion();
         GenerateAnswerOptions();
         countScore = 0;
+        originalPosition = transform.position;
 
     }
     private void Update()
@@ -31,6 +35,10 @@ public class MultipleChoiceQuestions : MonoBehaviour
         {
             SceneManager.LoadScene("Retry");
         }
+        if (countScore <4 ) { 
+            x = 0;
+            GameObject newMonster = Instantiate(monsterRegen, originalPosition, Quaternion.identity);
+        } 
     }
     private void GenerateRandomQuestion()
     {
@@ -91,6 +99,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
     {
         if (selectedAnswer == correctAnswer)
         {
+            x = 1;
             countScore += 1;
             Debug.Log("Correct Answer!");
             //forShoot.Shoot();
@@ -102,7 +111,10 @@ public class MultipleChoiceQuestions : MonoBehaviour
         }
         else
         {
-            
+            string question = string.Format("{0} + {1} = {2}", operand1, operand2 , operand1+operand2);
+            questionTextArea.text = question;
+            Invoke("GenerateRandomQuestion", 2.0f);
+            Invoke("GenerateAnswerOptions", 2.0f);
             Debug.Log("Incorrect Answer. Try again.");
         }
     }
