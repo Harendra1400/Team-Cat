@@ -2719,7 +2719,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 60
-    m_FontStyle: 1
+    m_FontStyle: 3
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 300
@@ -2729,7 +2729,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5 + 4 = ?
+  m_Text: 5  +  4 =  ?
 --- !u!222 &1326466126
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3831,8 +3831,8 @@ Transform:
   m_GameObject: {fileID: 1858571327}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.402084, y: -3.7490623, z: -6769.3735}
-  m_LocalScale: {x: 37.449684, y: 31.668638, z: 75.21527}
+  m_LocalPosition: {x: 2, y: -6, z: -6769}
+  m_LocalScale: {x: 42.852547, y: 36.9212, z: 81.194885}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1414467325}
@@ -4629,6 +4629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 
+  cd: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
