@@ -40,12 +40,13 @@ public class Weapon : MonoBehaviour
             Debug.Log("collision!!");
             Invoke("LoadRetry", 2.0f);
             //animator2.speed = 0f;
+            //SceneManager.LoadScene("LevelFailed");
 
         }
         
     }
     public void LoadRetry()
     {
-        SceneManager.LoadScene("Retry");
+        SceneManager.LoadScene("LevelFailed");
     }
 }

@@ -12,7 +12,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
     //public Weapon forShoot;
     public Text scoreCount;
     private Vector3 originalPosition;
-    public int x = 0;
+    public int x;
     //public GameObject monsterYellow;
 
     private int operand1;
@@ -26,7 +26,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
         GenerateAnswerOptions();
         countScore = 0;
         originalPosition = transform.position;
-
+        x = 0;
     }
     private void Update()
     {
@@ -36,7 +36,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
             SceneManager.LoadScene("Retry");
         }
         if (countScore <4 ) { 
-            x = 0;
+            //x = 0;
             //GameObject newMonster = Instantiate(monsterRegen, originalPosition, Quaternion.identity);
         } 
     }
@@ -97,14 +97,16 @@ public class MultipleChoiceQuestions : MonoBehaviour
 
     private void CheckAnswer(int selectedAnswer)
     {
+       
         if (selectedAnswer == correctAnswer)
         {
-            x = 1;
+            
             countScore += 1;
-            Debug.Log("Correct Answer!");
+            Debug.Log("Correct Answer! {0}");
+            x = x+ 1;
             //forShoot.Shoot();
-            GenerateRandomQuestion();
-            GenerateAnswerOptions();
+            //GenerateRandomQuestion();
+            //GenerateAnswerOptions();
             //monsterYellow.SetActive(true);
             //countScore += 1;
             //temp rng
@@ -114,10 +116,17 @@ public class MultipleChoiceQuestions : MonoBehaviour
         {
             string question = string.Format("{0} + {1} = {2}", operand1, operand2 , operand1+operand2);
             questionTextArea.text = question;
-            Invoke("GenerateRandomQuestion", 2.0f);
-            Invoke("GenerateAnswerOptions", 2.0f);
+            //Invoke("GenerateRandomQuestion", 2.0f);
+            //Invoke("GenerateAnswerOptions", 2.0f);
             Debug.Log("Incorrect Answer. Try again.");
+            x -= 1;
         }
+        if (x >= 5)
+        {
+            SceneManager.LoadScene("LevelComplete");
+        }
+        Invoke("GenerateRandomQuestion", 2.0f);
+        Invoke("GenerateAnswerOptions", 2.0f);
     }
 }
 

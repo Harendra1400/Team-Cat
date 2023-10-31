@@ -6,17 +6,19 @@ using UnityEngine.SceneManagement;
 public class RetrySwitcher : MonoBehaviour
 {
     public string sceneToLoad;
-
-    private void OnCollisionEnter2D(Collision2D other)
+    private MultipleChoiceQuestions m1;
+    public int cd;
+    private void Start()
     {
-        
-        if (other.gameObject.CompareTag("Cat"))
+        cd = m1.x;
+    }
+
+    private void Update()
+    {
+        if (cd >= 5)
         {
-            // Load the specified scene.
-            //Destroy(other.gameObject);
-            SceneManager.LoadScene(sceneToLoad);
+            SceneManager.LoadScene("LevelComplete");
         }
-        else { }
     }
 }
 
