@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float speed = 13f;
     public Rigidbody2D rb;
    // public GameObject monsterPrefab;
-    public GameObject newMonster;
+    //public GameObject newMonster;
     private Vector3 originalPosition;
  
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
             
             //monsterPrefab = hitInfo.gameObject.GetComponent<GameObject>();
             Destroy(hitInfo.gameObject);
-            newMonster.SetActive(true);
+            //newMonster.SetActive(true);
 
 
         }
