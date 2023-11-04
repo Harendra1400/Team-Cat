@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private AudioSource MonsterHitEffect;
+    public Animator animator;
     public float speed = 13f;
     public Rigidbody2D rb;
    // public GameObject monsterPrefab;
@@ -20,17 +22,18 @@ public class Bullet : MonoBehaviour
         //Debug.Log("x position is {0}",originalPosition.x);
     }
 
-    void OnTriggerEnter2D (Collider2D hitInfo)
-    {
-        Destroy(gameObject);
-        if(hitInfo.gameObject.tag.Equals("Monster"))
-        {
+    // void OnTriggerEnter2D (Collider2D hitInfo)
+    // {
+    //     //Destroy(gameObject);
+    //     if(hitInfo.gameObject.tag.Equals("Monster"))
+    //     {
             
-            //monsterPrefab = hitInfo.gameObject.GetComponent<GameObject>();
-            Destroy(hitInfo.gameObject);
-            newMonster.SetActive(true);
-
-
-        }
-    }
+    //     //     //monsterPrefab = hitInfo.gameObject.GetComponent<GameObject>();
+    //          MonsterHitEffect.Play();
+    //          animator.SetTrigger("explode");
+    //     //     Destroy(hitInfo.gameObject, 4);
+    //     //     newMonster.SetActive(true);
+    //         Debug.Log("WTFFFFFcollision!!");
+    //     }
+    // }
 }

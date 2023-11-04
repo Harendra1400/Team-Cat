@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TryAgain : MonoBehaviour
 {
+    [SerializeField] private AudioSource HomeBtnEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,9 @@ public class TryAgain : MonoBehaviour
 
     }
 
-    public void OnClickOfBtnPlay()
+    public void HomeSceneLoad()
     {
-        Debug.Log("-> Btn play");
+        HomeBtnEffect.Play();
         SceneManager.LoadScene("HomeScene");
     }
 }

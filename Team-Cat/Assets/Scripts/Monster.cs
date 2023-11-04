@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Monster : MonoBehaviour
 {
+    [SerializeField] private AudioSource MonsterHitEffect;
     public Animator animator1;
     private float _speed = 2f;
    // public string Retry= "Retry";
@@ -21,6 +22,29 @@ public class Monster : MonoBehaviour
     {
         transform.Translate(Vector3.left * (Time.deltaTime * _speed));
        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Cat"))
+        {
+            animator1.SetTrigger("monsterStop");
+            transform.Translate(Vector3.left * (Time.deltaTime * 0));
+        }
+    }
+
+    private void OnTriggerEnter2D (Collider2D hitInfo)
+    {
+        //Destroy(gameObject);
+        if(hitInfo.CompareTag("Bullet"))
+        {
+            Destroy(hitInfo.gameObject);
+            //monsterPrefab = hitInfo.gameObject.GetComponent<GameObject>();
+            MonsterHitEffect.Play();
+            animator1.SetTrigger("explode");
+            Destroy(gameObject, 1.0f);
+            //newMonster.SetActive(true);
+        }
     }
     /*private void OnCollisionEnter2D(Collision2D collision)
     {
