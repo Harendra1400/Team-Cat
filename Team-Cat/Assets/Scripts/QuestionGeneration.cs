@@ -11,34 +11,34 @@ public class MultipleChoiceQuestions : MonoBehaviour
     public Button[] optionButtons;
     //public Weapon forShoot;
     public Text scoreCount;
-    private Vector3 originalPosition;
-    public int x = 0;
+    //private Vector3 originalPosition;
+    //public int x;
     //public GameObject monsterYellow;
 
     private int operand1;
     private int operand2;
     private int correctAnswer;
     private int countScore;
+    public GameObject monster2;
+    public GameObject monster3;
+    public GameObject monster4;
+    //private GameObject monster5;
 
     private void Start()
     {
         GenerateRandomQuestion();
         GenerateAnswerOptions();
         countScore = 0;
-        originalPosition = transform.position;
-
+        scoreCount.text = countScore.ToString();
+        //originalPosition = transform.position;
+        //x = 0;
     }
     private void Update()
-    {
-        scoreCount.text = countScore.ToString();
+    {   Debug.Log(countScore.ToString());
         if (countScore == 5)
         {
-            SceneManager.LoadScene("Retry");
+            SceneManager.LoadScene("LevelComplete");
         }
-        if (countScore <4 ) { 
-            x = 0;
-            //GameObject newMonster = Instantiate(monsterRegen, originalPosition, Quaternion.identity);
-        } 
     }
     private void GenerateRandomQuestion()
     {
@@ -92,33 +92,58 @@ public class MultipleChoiceQuestions : MonoBehaviour
                 optionButtons[i].onClick.AddListener(() => CheckAnswer(int.Parse(buttonText.text)));
             }
         }
+        
     }
 
 
     private void CheckAnswer(int selectedAnswer)
     {
+        countScore = countScore + 1;
         if (selectedAnswer == correctAnswer)
-        {
-            x = 1;
-            countScore += 1;
-            Debug.Log("Correct Answer!");
-            //forShoot.Shoot();
-            GenerateRandomQuestion();
-            GenerateAnswerOptions();
-            //monsterYellow.SetActive(true);
-            //countScore += 1;
-            //temp rng
-
+        { 
+            //countScore = countScore + 1;
+            //scoreCount.text = countScore.ToString();
+            Debug.Log(countScore.ToString());
+            if(countScore == 1)
+            {
+                Invoke("Delay2", 2.0f);
+            }
+            else if (countScore == 3)
+            {
+                Invoke("Delay3", 2.0f);
+            }
+            else if(countScore == 5)
+            {
+                Invoke("Delay4", 2.0f);
+            }
         }
         else
         {
             string question = string.Format("{0} + {1} = {2}", operand1, operand2 , operand1+operand2);
             questionTextArea.text = question;
-            Invoke("GenerateRandomQuestion", 2.0f);
-            Invoke("GenerateAnswerOptions", 2.0f);
             Debug.Log("Incorrect Answer. Try again.");
         }
+        Invoke("GenerateRandomQuestion", 2.0f);
+        Invoke("GenerateAnswerOptions", 2.0f);
     }
+
+    private void Delay2()
+    {
+        monster2.SetActive(true);
+    }
+    private void Delay3()
+    {
+        monster3.SetActive(true);
+    }
+    private void Delay4()
+    {
+        monster4.SetActive(true);
+    }
+    /*private void delay5()
+    {
+        monster5.SetActive(true);
+    }*/
+
 }
 
 
