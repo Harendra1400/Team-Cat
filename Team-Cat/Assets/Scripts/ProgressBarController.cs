@@ -9,6 +9,6 @@ public class ProgressBarController : MonoBehaviour
 public Text ValueText;
     public void OnSliderChanged(float value)
     {
-        valueText.text = value.ToString();
+        //valueText.text = value.ToString();
     } 
 }

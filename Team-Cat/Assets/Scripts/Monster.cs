@@ -39,12 +39,15 @@ public class Monster : MonoBehaviour
         if(hitInfo.CompareTag("Bullet"))
         {
             Destroy(hitInfo.gameObject);
-            //monsterPrefab = hitInfo.gameObject.GetComponent<GameObject>();
             MonsterHitEffect.Play();
             animator1.SetTrigger("explode");
-            Destroy(gameObject, 1.0f);
-            //newMonster.SetActive(true);
+            Invoke("Delaydestroy", 1.0f);
+            
         }
+    }
+    private void Delaydestroy()
+    {
+        Destroy(gameObject);
     }
     /*private void OnCollisionEnter2D(Collision2D collision)
     {

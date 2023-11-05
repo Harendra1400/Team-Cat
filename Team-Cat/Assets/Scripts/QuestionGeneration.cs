@@ -34,7 +34,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
         //x = 0;
     }
     private void Update()
-    {   Debug.Log(countScore.ToString());
+    {   //Debug.Log(countScore.ToString());
         if (countScore == 5)
         {
             SceneManager.LoadScene("LevelComplete");
@@ -42,6 +42,8 @@ public class MultipleChoiceQuestions : MonoBehaviour
     }
     private void GenerateRandomQuestion()
     {
+        Debug.Log("generated");
+
         operand1 = Random.Range(1, 10);
         operand2 = Random.Range(1, 10);
         correctAnswer = operand1 + operand2;
@@ -57,6 +59,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
 
     private void GenerateAnswerOptions()
     {
+        Debug.Log("gennie");
         
         int[] answerOptions = new int[4];
         answerOptions[0] = correctAnswer;
@@ -100,7 +103,9 @@ public class MultipleChoiceQuestions : MonoBehaviour
     {
         countScore = countScore + 1;
         if (selectedAnswer == correctAnswer)
-        { 
+        {
+            Invoke("GenerateRandomQuestion", 2.0f);
+            Invoke("GenerateAnswerOptions", 2.0f);
             //countScore = countScore + 1;
             //scoreCount.text = countScore.ToString();
             Debug.Log(countScore.ToString());
@@ -123,8 +128,8 @@ public class MultipleChoiceQuestions : MonoBehaviour
             questionTextArea.text = question;
             Debug.Log("Incorrect Answer. Try again.");
         }
-        Invoke("GenerateRandomQuestion", 2.0f);
-        Invoke("GenerateAnswerOptions", 2.0f);
+        //Invoke("GenerateRandomQuestion", 2.0f);
+        //Invoke("GenerateAnswerOptions", 2.0f);
     }
 
     private void Delay2()
