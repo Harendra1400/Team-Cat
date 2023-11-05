@@ -9,7 +9,6 @@ public class Bullet : MonoBehaviour
     public Animator animator;
     public float speed = 13f;
     public Rigidbody2D rb;
-  
     private Vector3 originalPosition;
  
     // Start is called before the first frame update
@@ -19,6 +18,4 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.right * speed;
        
     }
-
-    
 }

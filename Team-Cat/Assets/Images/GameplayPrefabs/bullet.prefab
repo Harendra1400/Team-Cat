@@ -166,7 +166,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   speed: 13
   rb: {fileID: 30787455507729514}
-  newMonster: {fileID: 0}
+  ImpactEffect: {fileID: 8709472364701888993, guid: 9e5d8185cee824f6084af4eee5a2418e, type: 3}
 --- !u!82 &-338402701973255585
 AudioSource:
   m_ObjectHideFlags: 0

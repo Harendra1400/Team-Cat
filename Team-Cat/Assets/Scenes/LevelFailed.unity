@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 478.5095, y: -413.6016}
-  m_SizeDelta: {x: 554.7234, y: 104.7124}
+  m_AnchoredPosition: {x: 432.66235, y: -390.90176}
+  m_SizeDelta: {x: 597.2233, y: 118.226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382964318
 MonoBehaviour:
@@ -210,6 +210,18 @@ MonoBehaviour:
       - m_Target: {fileID: 382964321}
         m_TargetAssemblyTypeName: retryScript, Assembly-CSharp
         m_MethodName: LoadRetry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 382964322}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -280,7 +292,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 696d612aa3519430c88f808401cb2170, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6cd95ece4d1f6412d9899b009893d436, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -476,8 +488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85, y: 65.482}
-  m_SizeDelta: {x: 2191.4734, y: 1062.88}
+  m_AnchoredPosition: {x: -40.494995, y: 64.65}
+  m_SizeDelta: {x: 2554.779, y: 1154.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &733868632
 MonoBehaviour:
@@ -657,7 +669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281, y: 392}
+  m_AnchoredPosition: {x: 395, y: 392}
   m_SizeDelta: {x: 600, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220356933
@@ -734,8 +746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -574, y: -401.6016}
-  m_SizeDelta: {x: 467.01, y: 97.8387}
+  m_AnchoredPosition: {x: -427, y: -385.65356}
+  m_SizeDelta: {x: 533.089, y: 111.0953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369472477
 MonoBehaviour:
@@ -903,7 +915,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 696d612aa3519430c88f808401cb2170, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6cd95ece4d1f6412d9899b009893d436, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1179,7 +1191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21, y: -482}
+  m_AnchoredPosition: {x: -25.507, y: -556.79}
   m_SizeDelta: {x: 570.0239, y: 171.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817282336
@@ -1406,7 +1418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40.495, y: 504}
+  m_AnchoredPosition: {x: 9.9834, y: 499}
   m_SizeDelta: {x: 600, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933633521
