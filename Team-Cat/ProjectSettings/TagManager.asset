@@ -8,6 +8,7 @@ TagManager:
   - Monster
   - Cat
   - red_mon_spritesheet_0
+  - Boss
   layers:
   - Default
   - TransparentFX

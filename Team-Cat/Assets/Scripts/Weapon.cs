@@ -55,8 +55,7 @@ public class Weapon : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Monster monster = GetComponent<Monster>(); 
-        //Animator animator2 = monster.animator1;
+      
         if (collision.gameObject.CompareTag("Monster"))
         {
             
@@ -64,12 +63,12 @@ public class Weapon : MonoBehaviour
             GameoverEffect.Play();
             Debug.Log("collision!!");
             Invoke("LoadRetry", 2.0f);
-            //animator2.speed = 0f;
-            //SceneManager.LoadScene("LevelFailed");
+          
 
         }
         
     }
+    
     public void LoadRetry()
     {
         SceneManager.LoadScene("LevelFailed");

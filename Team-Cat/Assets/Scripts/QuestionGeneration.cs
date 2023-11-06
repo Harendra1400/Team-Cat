@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MultipleChoiceQuestions : MonoBehaviour
 {   
@@ -19,6 +20,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
     private int operand2;
     private int correctAnswer;
     private int countScore;
+    private int answer;
     public GameObject monster2;
     public GameObject monster3;
     public GameObject monster4;
@@ -29,6 +31,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
         GenerateRandomQuestion();
         GenerateAnswerOptions();
         countScore = 0;
+        answer = 0;
         scoreCount.text = countScore.ToString();
         //originalPosition = transform.position;
         //x = 0;
@@ -42,6 +45,8 @@ public class MultipleChoiceQuestions : MonoBehaviour
     }
     private void GenerateRandomQuestion()
     {
+        Debug.Log("generated");
+
         operand1 = Random.Range(1, 10);
         operand2 = Random.Range(1, 10);
         correctAnswer = operand1 + operand2;
@@ -49,14 +54,12 @@ public class MultipleChoiceQuestions : MonoBehaviour
         string question = string.Format("{0} + {1} = ?", operand1, operand2);
 
         
-        if (questionTextArea != null)
-        {
-            questionTextArea.text = question;
-        }
+        questionTextArea.text = question;
     }
 
     private void GenerateAnswerOptions()
     {
+        Debug.Log("gennie");
         
         int[] answerOptions = new int[4];
         answerOptions[0] = correctAnswer;
@@ -81,40 +84,59 @@ public class MultipleChoiceQuestions : MonoBehaviour
             answerOptions[j] = temp;
         }
 
-        
+        int selectedValue=0;
         for (int i = 0; i < optionButtons.Length; i++)
         {
             if (optionButtons[i] != null)
             {
-                
+
                 Text buttonText = optionButtons[i].GetComponentInChildren<Text>();
                 buttonText.text = answerOptions[i].ToString();
-                optionButtons[i].onClick.AddListener(() => CheckAnswer(int.Parse(buttonText.text)));
+                //string buttonText = optionButtons[i].GetComponentInChildren<Text>().text;
+
+                optionButtons[i].onClick.AddListener(() =>
+                {
+                    selectedValue = int.Parse(buttonText.ToString());
+                    
+                    //optionButtons[i].onClick.AddListener(() => CheckAnswer(int.Parse(buttonText.text)));
+                    
+                });break;
             }
         }
-        
+        CheckAnswer(selectedValue);
+
+
     }
 
 
-    private void CheckAnswer(int selectedAnswer)
-    {
-        countScore = countScore + 1;
-        if (selectedAnswer == correctAnswer)
-        { 
-            //countScore = countScore + 1;
-            //scoreCount.text = countScore.ToString();
+    private void CheckAnswer(int selectedanswer)
+    {   
+        //Text tmp = clickedButton.GetComponentInChildren<Text>();
+        //int value = int.Parse(tmp.text);   
+       // Debug.Log(value);
+        if (selectedanswer == correctAnswer)
+        {
+            scorecheck();
+            Debug.Log("hello");
+            
             Debug.Log(countScore.ToString());
             if(countScore == 1)
             {
                 Invoke("Delay2", 2.0f);
+                Invoke("GenerateRandomQuestion", 2.0f);
+                Invoke("GenerateAnswerOptions", 2.0f);
             }
-            else if (countScore == 3)
+            else if (countScore == 2)
             {
                 Invoke("Delay3", 2.0f);
+                Invoke("GenerateRandomQuestion", 2.0f);
+                Invoke("GenerateAnswerOptions", 2.0f);
             }
-            else if(countScore == 5)
+            else if(countScore == 3)
             {
                 Invoke("Delay4", 2.0f);
+                Invoke("GenerateRandomQuestion", 2.0f);
+                Invoke("GenerateAnswerOptions", 2.0f);
             }
         }
         else
@@ -123,10 +145,24 @@ public class MultipleChoiceQuestions : MonoBehaviour
             questionTextArea.text = question;
             Debug.Log("Incorrect Answer. Try again.");
         }
-        Invoke("GenerateRandomQuestion", 2.0f);
-        Invoke("GenerateAnswerOptions", 2.0f);
+        //Invoke("GenerateRandomQuestion", 2.0f);
+        //Invoke("GenerateAnswerOptions", 2.0f);
     }
+    private void scorecheck()
+    {   
 
+        if (countScore <5) {
+            countScore++;
+        }
+        if(countScore == 5) {
+            Invoke("sceneswitch", 2.0f);
+        }
+
+    }
+    private void sceneswitch()
+    {
+        SceneManager.LoadScene("LevelComplete");
+    }
     private void Delay2()
     {
         monster2.SetActive(true);
