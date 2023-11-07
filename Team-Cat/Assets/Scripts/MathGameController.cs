@@ -33,7 +33,7 @@ public class MathGameController : MonoBehaviour
         x2 = num2;
         correctAnswer = num1 + num2;
 
-        questionText.text = num1 + " + " + num2 + " = ?";
+        questionText.text = num1 + "  +  " + num2 + "  =   ?";
 
         List<int> answerOptions = new List<int>();
         answerOptions.Add(correctAnswer);
@@ -102,7 +102,7 @@ public class MathGameController : MonoBehaviour
             else
             {
                 Debug.Log("incorrect");
-                questionText.text = x1 + " + " + x2 + " = " + correctAnswer;
+                questionText.text = x1 + "  +  " + x2 + "  =  " + correctAnswer;
                 Invoke("GenerateQuestion", 2.0f);
 
             }
@@ -130,7 +130,7 @@ public class MathGameController : MonoBehaviour
         }
         else if (score == 5)
         {
-            Invoke("sceneswitch", 3.0f);
+            Invoke("sceneswitch", 2.0f);
         }
     }
     private void sceneswitch()
