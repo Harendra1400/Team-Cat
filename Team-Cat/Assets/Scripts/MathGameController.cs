@@ -8,9 +8,8 @@ public class MathGameController : MonoBehaviour
     public Text questionText;
     public Button[] answerButtons;
     public Text scoreText;
-
+    //public Weapon weapon;
     private int score = 0;
-   // private int questionCount = 0;
     private int correctAnswer;
     private int x1, x2;
     public GameObject monster2;
@@ -93,7 +92,7 @@ public class MathGameController : MonoBehaviour
             if (selectedNumber == correctAnswer)
             {
                 Debug.Log("correct");
-                
+                //weapon.ring();
                 score++;
                 Debug.Log(score);
                 scoreText.text = score.ToString();
