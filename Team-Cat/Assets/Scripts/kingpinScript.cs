@@ -6,6 +6,7 @@ public class kingpinScript : MonoBehaviour
 {
     [SerializeField] private AudioSource MonsterHitEffect;
     public Animator animator;
+    private float _speed = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class kingpinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.left * (Time.deltaTime * _speed));
     }
 
     private void OnTriggerEnter2D (Collider2D hitInfo)

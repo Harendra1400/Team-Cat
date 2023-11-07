@@ -20,7 +20,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
     private int operand2;
     private int correctAnswer;
     private int countScore;
-    private int answer;
+    //private int answer;
     public GameObject monster2;
     public GameObject monster3;
     public GameObject monster4;
@@ -31,7 +31,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
         GenerateRandomQuestion();
         GenerateAnswerOptions();
         countScore = 0;
-        answer = 0;
+        //answer = 0;
         scoreCount.text = countScore.ToString();
         //originalPosition = transform.position;
         //x = 0;
