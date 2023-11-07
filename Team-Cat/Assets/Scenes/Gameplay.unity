@@ -4065,6 +4065,7 @@ MonoBehaviour:
   monster2: {fileID: 2029023010}
   monster3: {fileID: 356604581}
   monster4: {fileID: 782916891}
+  monster5: {fileID: 1492196455}
 --- !u!1 &1492196455
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,13 +4077,14 @@ GameObject:
   - component: {fileID: 1492196456}
   - component: {fileID: 1492196457}
   - component: {fileID: 1492196458}
+  - component: {fileID: 1492196459}
   m_Layer: 0
   m_Name: kingpin
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1492196456
 Transform:
   m_ObjectHideFlags: 0
@@ -4246,6 +4248,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &1492196459
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492196455}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1539314629
 GameObject:
   m_ObjectHideFlags: 0

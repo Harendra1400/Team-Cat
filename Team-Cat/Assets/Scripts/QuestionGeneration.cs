@@ -24,7 +24,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
     public GameObject monster2;
     public GameObject monster3;
     public GameObject monster4;
-    //private GameObject monster5;
+    public GameObject monster5;
 
     private void Start()
     {
@@ -38,9 +38,10 @@ public class MultipleChoiceQuestions : MonoBehaviour
     }
     private void Update()
     {   Debug.Log(countScore.ToString());
-        if (countScore == 5)
+        if (countScore > 15)
         {
-            SceneManager.LoadScene("LevelComplete");
+            //SceneManager.LoadScene("LevelComplete");
+            Invoke("sceneswitch", 2.0f);
         }
     }
     private void GenerateRandomQuestion()
@@ -53,8 +54,10 @@ public class MultipleChoiceQuestions : MonoBehaviour
 
         string question = string.Format("{0} + {1} = ?", operand1, operand2);
 
-        
-        questionTextArea.text = question;
+        if (questionTextArea.text != null)
+        {
+            questionTextArea.text = question;
+        }
     }
 
     private void GenerateAnswerOptions()
@@ -84,7 +87,7 @@ public class MultipleChoiceQuestions : MonoBehaviour
             answerOptions[j] = temp;
         }
 
-        int selectedValue=0;
+        //int selectedValue=0;
         for (int i = 0; i < optionButtons.Length; i++)
         {
             if (optionButtons[i] != null)
@@ -94,16 +97,13 @@ public class MultipleChoiceQuestions : MonoBehaviour
                 buttonText.text = answerOptions[i].ToString();
                 //string buttonText = optionButtons[i].GetComponentInChildren<Text>().text;
 
-                optionButtons[i].onClick.AddListener(() =>
-                {
-                    selectedValue = int.Parse(buttonText.ToString());
                     
-                    //optionButtons[i].onClick.AddListener(() => CheckAnswer(int.Parse(buttonText.text)));
+                    optionButtons[i].onClick.AddListener(() => CheckAnswer(int.Parse(buttonText.text)));
                     
-                });break;
+                
             }
         }
-        CheckAnswer(selectedValue);
+        //CheckAnswer(selectedValue);
 
 
     }
@@ -117,26 +117,27 @@ public class MultipleChoiceQuestions : MonoBehaviour
         if (selectedanswer == correctAnswer)
         {
             scorecheck();
-            Debug.Log("hello");
+            //Debug.Log("hello");
             
             Debug.Log(countScore.ToString());
             if(countScore == 1)
             {
                 Invoke("Delay2", 2.0f);
-                Invoke("GenerateRandomQuestion", 2.0f);
-                Invoke("GenerateAnswerOptions", 2.0f);
+                
             }
-            else if (countScore == 2)
+            else if (countScore == 3)
             {
                 Invoke("Delay3", 2.0f);
-                Invoke("GenerateRandomQuestion", 2.0f);
-                Invoke("GenerateAnswerOptions", 2.0f);
+               
             }
-            else if(countScore == 3)
+            else if(countScore == 5)
             {
                 Invoke("Delay4", 2.0f);
-                Invoke("GenerateRandomQuestion", 2.0f);
-                Invoke("GenerateAnswerOptions", 2.0f);
+                
+            }
+            else if(countScore == 15)
+            {
+                Invoke("Delay5", 2.0f);
             }
         }
         else
@@ -145,18 +146,18 @@ public class MultipleChoiceQuestions : MonoBehaviour
             questionTextArea.text = question;
             Debug.Log("Incorrect Answer. Try again.");
         }
-        //Invoke("GenerateRandomQuestion", 2.0f);
-        //Invoke("GenerateAnswerOptions", 2.0f);
+        Invoke("GenerateRandomQuestion", 2.0f);
+        Invoke("GenerateAnswerOptions", 2.0f);
     }
     private void scorecheck()
     {   
 
-        if (countScore <5) {
+       // if (countScore <5) {
             countScore++;
-        }
-        if(countScore == 5) {
+        //}
+        /*if(countScore == 5) {
             Invoke("sceneswitch", 2.0f);
-        }
+        }*/
 
     }
     private void sceneswitch()
@@ -175,10 +176,10 @@ public class MultipleChoiceQuestions : MonoBehaviour
     {
         monster4.SetActive(true);
     }
-    /*private void delay5()
+    private void Delay5()
     {
         monster5.SetActive(true);
-    }*/
+    }
 
 }
 
