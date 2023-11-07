@@ -9,9 +9,10 @@ public class MathGameController : MonoBehaviour
     public Button[] answerButtons;
     public Text scoreText;
     //public Weapon weapon;
-    private int score = 0;
+    public int score = 0;
     private int correctAnswer;
     private int x1, x2;
+    public int x;
     public GameObject monster2;
     public GameObject monster3;
     public GameObject monster4;
@@ -20,6 +21,7 @@ public class MathGameController : MonoBehaviour
 
     void Start()
     {
+        x = 0;
         GenerateQuestion();
     }
 
@@ -93,8 +95,10 @@ public class MathGameController : MonoBehaviour
             {
                 Debug.Log("correct");
                 //weapon.ring();
+                x = 1;
                 score++;
                 Debug.Log(score);
+                Debug.Log("x val:"+ x);
                 scoreText.text = score.ToString();
                 Invoke("GenerateQuestion", 2.0f);
             }
