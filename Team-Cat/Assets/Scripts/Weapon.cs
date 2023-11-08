@@ -16,22 +16,33 @@ public class Weapon : MonoBehaviour
     public int maxInstances = 1;
     private int currentInstances = 0;
     private bool canTriggerAnimation = true;
-    
+   // public MathGameController obj;
+   // public int score2;
+
 
     // Update is called once per frame
+    private void Start()
+    {
+        //score2 = obj.score;
+    }
     void Update()
     {
-       if((Input.GetButtonDown("Fire1")) && canTriggerAnimation)
+        if((Input.GetButtonDown("Fire1")) && canTriggerAnimation)
+       // Debug.Log(score2);
+      // if(score2!=obj.score && canTriggerAnimation)
         {
-            
+           // score2=obj.score;
             Shoot();
             canTriggerAnimation = false;
             StartCoroutine(ResetTriggerFlag(1f));
+           // obj.x = 0;
+
         }
     }
 
     public void Shoot()
     {
+        ///Debug.Log("x val:" + obj.x);
         GunShotEffect.Play();
         animator.SetTrigger("shoot");
         if (currentInstances < maxInstances)
