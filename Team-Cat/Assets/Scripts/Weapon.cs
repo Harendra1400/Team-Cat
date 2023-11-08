@@ -71,6 +71,6 @@ public class Weapon : MonoBehaviour
     
     public void LoadRetry()
     {
-        SceneManager.LoadScene("LevelFailed");
+        SceneManager.LoadScene("try");
     }
 }
