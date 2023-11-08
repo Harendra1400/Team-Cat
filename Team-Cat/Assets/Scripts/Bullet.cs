@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private AudioSource MonsterHitEffect;
     public Animator animator;
     public float speed = 13f;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Vector3 originalPosition;
  
     // Start is called before the first frame update
