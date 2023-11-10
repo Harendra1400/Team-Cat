@@ -7,7 +7,7 @@ using System;
 public class script : MonoBehaviour
 {
 
-    private string _adUnitId = "ca-app-pub-3940256099942544/6300978111";
+    private string _adUnitId = "ca-app-pub-6208510871080134/1737888424";
     // Start is called before the first frame update
     void Start()
     {
