@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private AudioSource MonsterHitEffect;
+   /* [SerializeField] private AudioSource MonsterHitEffect;
     public Animator animator;
     public float speed = 13f;
     public Rigidbody2D rb;
@@ -18,5 +18,5 @@ public class Bullet : MonoBehaviour
         originalPosition = transform.position;
         rb.velocity = transform.right * speed;
        
-    }
+    }*/
 }

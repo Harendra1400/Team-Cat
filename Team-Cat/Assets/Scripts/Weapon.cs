@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Weapon : MonoBehaviour
@@ -15,34 +16,61 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public int maxInstances = 1;
     private int currentInstances = 0;
-    private bool canTriggerAnimation = true;
-   // public MathGameController obj;
-   // public int score2;
+    public bool canTriggerAnimation = true;
+    [SerializeField] private AudioSource MonsterHitEffect;
+    public Animator animator1;
+    public float speed = 13f;
+    public Rigidbody2D rb;
+    private Vector3 originalPosition;
+    public Button[] buttons;
+    public MathGameController triggervar;
 
-
-    // Update is called once per frame
     private void Start()
     {
-        //score2 = obj.score;
+        originalPosition = transform.position;
+        rb.velocity = transform.right * speed;
+        addListen();
+       
     }
     void Update()
     {
-        if((Input.GetButtonDown("Fire1")) && canTriggerAnimation)
-       // Debug.Log(score2);
-      // if(score2!=obj.score && canTriggerAnimation)
+      
+    }
+    private void addListen()
+    {
+        for (int i = 0; i < buttons.Length; i++)
         {
-           // score2=obj.score;
-            Shoot();
-            canTriggerAnimation = false;
-            StartCoroutine(ResetTriggerFlag(1f));
-           // obj.x = 0;
+            int buttonIndex = i;
 
+            buttons[i].onClick.AddListener(() => OnButtonClick(buttonIndex));
         }
+    }
+    private void OnButtonClick(int buttonIndex)
+    {
+        int buttonValue;
+        bool isParsed = int.TryParse(buttons[buttonIndex].GetComponentInChildren<Text>().text, out buttonValue);
+        if (isParsed && buttonValue == triggervar.correctAnswer)
+        {
+            Debug.Log(buttonValue);
+            buttons[buttonIndex].name = "answer";
+            Debug.Log("Correct button selected!");
+            if (canTriggerAnimation)
+            {
+                CorrectButtonClicked();
+            }
+        }
+    }
+    private void CorrectButtonClicked()
+    {
+        Shoot();
+        canTriggerAnimation = false;
+        StartCoroutine(ResetTriggerFlag(1f));
+        addListen();
     }
 
     public void Shoot()
     {
-        ///Debug.Log("x val:" + obj.x);
+       
         GunShotEffect.Play();
         animator.SetTrigger("shoot");
         if (currentInstances < maxInstances)

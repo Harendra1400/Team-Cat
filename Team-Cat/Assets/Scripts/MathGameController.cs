@@ -10,18 +10,21 @@ public class MathGameController : MonoBehaviour
     public Text scoreText;
     //public Weapon weapon;
     public int score = 0;
-    private int correctAnswer;
+    public int correctAnswer;
     private int x1, x2;
-    public int x;
+    //public int x;
     public GameObject monster2;
     public GameObject monster3;
     public GameObject monster4;
     public GameObject monster5;
+    //public Weapon trigger;
+    public bool starter=false;
+    
 
 
     void Start()
     {
-        x = 0;
+        //x = 0;
         GenerateQuestion();
     }
 
@@ -92,21 +95,19 @@ public class MathGameController : MonoBehaviour
         if (int.TryParse(selectedAnswer, out selectedNumber))
         {
             if (selectedNumber == correctAnswer)
-            {
+            {   
                 Debug.Log("correct");
-                //weapon.ring();
-                x = 1;
                 score++;
                 Debug.Log(score);
-                Debug.Log("x val:"+ x);
+                //Debug.Log("x val:"+ x);
                 scoreText.text = score.ToString();
-                Invoke("GenerateQuestion", 1.0f);
+                Invoke("GenerateQuestion", 1.5f);
             }
             else
-            {
+            {   
                 Debug.Log("incorrect");
                 questionText.text = x1 + "  +  " + x2 + "  =  " + correctAnswer;
-                Invoke("GenerateQuestion", 2.0f);
+                Invoke("GenerateQuestion", 1.0f);
 
             }
         }
@@ -117,23 +118,23 @@ public class MathGameController : MonoBehaviour
         }
         if (score == 1)
         {
-            Invoke("Delay2", 1.0f);         
+            Invoke("Delay2", 1.5f);         
         }
         else if (score == 2)
         {
-            Invoke("Delay3", 1.0f);            
+            Invoke("Delay3", 1.5f);            
         }
         else if (score == 3)
         {
-            Invoke("Delay4", 1.0f);          
+            Invoke("Delay4", 1.5f);          
         }
         else if (score == 4)
         {
-            Invoke("Delay5", 1.0f);
+            Invoke("Delay5", 1.5f);
         }
         else if (score == 5)
         {
-            Invoke("sceneswitch", 1.0f);
+            Invoke("sceneswitch", 1.5f);
         }
     }
     private void sceneswitch()
@@ -156,5 +157,6 @@ public class MathGameController : MonoBehaviour
     {
         monster5.SetActive(true);
     }
+  
 
 }
