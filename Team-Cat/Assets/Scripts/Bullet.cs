@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     public float speed = 13f;
     public Rigidbody2D rb;
     private Vector3 originalPosition;
- 
+    pew pew
     // Start is called before the first frame update
     void Start()
     {
