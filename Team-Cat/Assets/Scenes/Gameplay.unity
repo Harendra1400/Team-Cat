@@ -3269,7 +3269,7 @@ Transform:
   m_GameObject: {fileID: 1013939700}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1218, y: -85, z: -5517}
+  m_LocalPosition: {x: 1491, y: -85, z: -5517}
   m_LocalScale: {x: 130, y: 130, z: 66.71892}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3607,7 +3607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1124476232
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4198,7 +4198,7 @@ GameObject:
   - component: {fileID: 1492196462}
   m_Layer: 0
   m_Name: kingpin
-  m_TagString: Boss
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4212,7 +4212,7 @@ Transform:
   m_GameObject: {fileID: 1492196455}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 859.1886, y: 65.214355, z: -11555.999}
+  m_LocalPosition: {x: 1400, y: 65.214355, z: -11555.999}
   m_LocalScale: {x: 38.779686, y: 33.086277, z: 128.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6063,6 +6063,8 @@ MonoBehaviour:
   - {fileID: 760282127}
   - {fileID: 426560777}
   scoreText: {fileID: 189775664}
+  score: 0
+  x: 0
   monster2: {fileID: 2029023010}
   monster3: {fileID: 356604581}
   monster4: {fileID: 782916891}

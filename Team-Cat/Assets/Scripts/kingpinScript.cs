@@ -6,7 +6,7 @@ public class kingpinScript : MonoBehaviour
 {
     [SerializeField] private AudioSource MonsterHitEffect;
     public Animator animator;
-    private float _speed = 2f;
+    private float _speed = 1.5f;
     // Start is called before the first frame update
     void Start()
     {

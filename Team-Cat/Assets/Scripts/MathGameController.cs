@@ -100,7 +100,7 @@ public class MathGameController : MonoBehaviour
                 Debug.Log(score);
                 Debug.Log("x val:"+ x);
                 scoreText.text = score.ToString();
-                Invoke("GenerateQuestion", 2.0f);
+                Invoke("GenerateQuestion", 1.0f);
             }
             else
             {
@@ -117,23 +117,23 @@ public class MathGameController : MonoBehaviour
         }
         if (score == 1)
         {
-            Invoke("Delay2", 2.0f);         
+            Invoke("Delay2", 1.0f);         
         }
         else if (score == 2)
         {
-            Invoke("Delay3", 2.0f);            
+            Invoke("Delay3", 1.0f);            
         }
         else if (score == 3)
         {
-            Invoke("Delay4", 2.0f);          
+            Invoke("Delay4", 1.0f);          
         }
         else if (score == 4)
         {
-            Invoke("Delay5", 2.0f);
+            Invoke("Delay5", 1.0f);
         }
         else if (score == 5)
         {
-            Invoke("sceneswitch", 2.0f);
+            Invoke("sceneswitch", 1.0f);
         }
     }
     private void sceneswitch()
