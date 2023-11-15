@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pausebutton : MonoBehaviour
 {
     // Start is called before the first frame update
-    private bool isPaused = false;
+   /* private bool isPaused = false;
     void Start()
     {
         
@@ -35,5 +35,5 @@ public class Pausebutton : MonoBehaviour
             Time.timeScale = 1f; // Set the time scale back to 1 to resume normal gameplay
             // Additional resume-related logic can be added here
         }
-    }
+    }*/
 }
