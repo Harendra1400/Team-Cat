@@ -101,7 +101,7 @@ public class Weapon : MonoBehaviour
             animator.SetTrigger("dead");
             GameoverEffect.Play();
             Debug.Log("collision!!");
-            Invoke("LoadRetry", 2.0f);
+            Invoke("LoadRetry", 1.0f);
           
 
         }
