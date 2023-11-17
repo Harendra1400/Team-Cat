@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class MathGameController : MonoBehaviour
 {
+    [SerializeField] private AudioSource LvlCompleteEffect;
     public Text questionText;
     public Button[] answerButtons;
     public Text scoreText;
@@ -134,6 +135,7 @@ public class MathGameController : MonoBehaviour
         }
         else if (score == 5)
         {
+            LvlCompleteEffect.Play();
             Invoke("sceneswitch", 1.5f);
         }
     }
