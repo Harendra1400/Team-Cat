@@ -9,6 +9,7 @@ TagManager:
   - Cat
   - red_mon_spritesheet_0
   - Boss
+  - pause
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
     locked: 1
   - name: catGame
     uniqueID: 3982248359
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 3800038659
     locked: 0
