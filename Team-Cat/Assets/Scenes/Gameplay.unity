@@ -6479,9 +6479,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1955135547}
-        m_TargetAssemblyTypeName: TryAgain, Assembly-CSharp
-        m_MethodName: HomeSceneLoad
+      - m_Target: {fileID: 2101013755}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
