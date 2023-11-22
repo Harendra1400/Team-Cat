@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ContactUs.unity
     guid: 438b48287f9367d46b2cd41cd3be4cf4
-  - enabled: 0
+  - enabled: 1
     path: Assets/retry scene.unity
     guid: 4b6142280dc9cc94e8f46712e9aa1f87
   - enabled: 0
