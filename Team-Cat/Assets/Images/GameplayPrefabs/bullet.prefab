@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 30787455507729514}
   - component: {fileID: 1611663297596700371}
   - component: {fileID: -176860199786122035}
+  - component: {fileID: -5881439961401156188}
+  - component: {fileID: 9016977904161327560}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Bullet
@@ -161,5 +163,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba511b8cd53c4ba8a71407ce1154296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5881439961401156188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571613210497310657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2f4b815072c47579914808174e2b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GunShotEffect: {fileID: 0}
+  GameoverEffect: {fileID: 0}
+  animator: {fileID: 0}
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 2571613210497310657}
+  maxInstances: 1
+  canTriggerAnimation: 1
+  MonsterHitEffect: {fileID: 0}
+  animator1: {fileID: 0}
   speed: 13
   rb: {fileID: 30787455507729514}
+  buttons: []
+  triggervar: {fileID: 0}
+--- !u!114 &9016977904161327560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571613210497310657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba511b8cd53c4ba8a71407ce1154296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
