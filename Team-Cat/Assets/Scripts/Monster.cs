@@ -38,6 +38,7 @@ public class Monster : MonoBehaviour
         //Destroy(gameObject);
         if(hitInfo.CompareTag("Bullet"))
         {
+            Debug.Log("bullet hit monster"); 
             Destroy(hitInfo.gameObject);
             MonsterHitEffect.Play();
             animator1.SetTrigger("explode");
