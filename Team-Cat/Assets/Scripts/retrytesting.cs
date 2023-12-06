@@ -20,5 +20,9 @@ public class retrytesting : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
     }
+    public void hometest()
+    {
+        SceneManager.LoadScene("Homescene");
+    }
    
 }
