@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Retry.unity
     guid: a02e5fec818380f42ac1da35feed207b
   - enabled: 1
-    path: Assets/Scenes/levefaill.unity
+    path: Assets/Scenes/levefail.unity
     guid: 35d062f54f1279b4a9f605e07636cb16
+  - enabled: 1
+    path: Assets/Scenes/levelcomplete.unity
+    guid: d8176657ba965d24e9b010862c6c9ae0
   m_configObjects: {}

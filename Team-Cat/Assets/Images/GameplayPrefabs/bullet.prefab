@@ -183,8 +183,7 @@ MonoBehaviour:
   maxInstances: 1
   canTriggerAnimation: 1
   MonsterHitEffect: {fileID: 0}
-  animator1: {fileID: 0}
-  speed: 13
+  speed: 16
   rb: {fileID: 30787455507729514}
   buttons: []
   triggervar: {fileID: 0}

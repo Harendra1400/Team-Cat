@@ -141,7 +141,7 @@ public class MathGameController : MonoBehaviour
     }
     private void sceneswitch()
     {
-        SceneManager.LoadScene("LevelComplete");
+        SceneManager.LoadScene("levelcomplete");
     }
     private void Delay2()
     {
