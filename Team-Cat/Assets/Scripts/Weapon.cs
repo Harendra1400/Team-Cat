@@ -18,7 +18,6 @@ public class Weapon : MonoBehaviour
     private int currentInstances = 0;
     public bool canTriggerAnimation = true;
     [SerializeField] private AudioSource MonsterHitEffect;
-    public Animator animator1;
     public float speed = 13f;
     public Rigidbody2D rb;
     private Vector3 originalPosition;
@@ -100,7 +99,7 @@ public class Weapon : MonoBehaviour
             
             animator.SetTrigger("dead");
             GameoverEffect.Play();
-            Debug.Log("collision!!");
+            Debug.Log("monster touch cat");
             Invoke("LoadRetry", 1.0f);
           
 
