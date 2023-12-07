@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/levelcomplete.unity
     guid: d8176657ba965d24e9b010862c6c9ae0
+  - enabled: 1
+    path: Assets/Scenes/Gameplay 1.unity
+    guid: cd6d16aac227fab4b9b65a501b3b2100
   m_configObjects: {}
